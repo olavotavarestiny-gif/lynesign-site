@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,9 +49,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold text-lg">
-              L
-            </div>
+            <Image
+              src="/logo.webp"
+              alt="LyneSign Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+              priority
+            />
             <span className="font-heading font-bold text-lg hidden sm:inline text-text-dark">LyneSign</span>
           </Link>
 
