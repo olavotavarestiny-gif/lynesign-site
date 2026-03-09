@@ -100,14 +100,16 @@ export default function Navbar() {
                       ))
                     ) : (
                       // Other dropdowns
-                      link.submenu.map((item) => (
-                        <a
-                          key={item.label}
-                          href={item.href}
-                          className="block px-4 py-2 text-sm text-text-dark hover:bg-gray-100 rounded-lg transition-colors"
-                        >
-                          {item.label}
-                        </a>
+                      link.submenu.map((item: any) => (
+                        'label' in item && (
+                          <a
+                            key={item.label}
+                            href={item.href}
+                            className="block px-4 py-2 text-sm text-text-dark hover:bg-gray-100 rounded-lg transition-colors"
+                          >
+                            {item.label}
+                          </a>
+                        )
                       ))
                     )}
                   </div>
