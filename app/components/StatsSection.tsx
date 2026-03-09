@@ -45,28 +45,28 @@ export default function StatsSection() {
       value: 95,
       suffix: '%',
       label: 'More Impactful Than Static Ads',
-      color: 'from-orange-400 to-orange-600',
+      color: 'from-navy to-blue-700',
     },
     {
       icon: Eye,
       value: 70,
       suffix: '%',
       label: 'Increase in Ticket Value',
-      color: 'from-blue-400 to-blue-600',
+      color: 'from-blue-600 to-blue-800',
     },
     {
       icon: Award,
       value: 83,
       suffix: '%',
       label: 'Consumer Recall Rate',
-      color: 'from-purple-400 to-purple-600',
+      color: 'from-navy to-blue-700',
     },
     {
       icon: Users,
       value: 2000000,
       suffix: '+',
       label: 'Monthly Screen Views',
-      color: 'from-pink-400 to-pink-600',
+      color: 'from-blue-600 to-blue-800',
     },
   ];
 
@@ -101,11 +101,11 @@ export default function StatsSection() {
                   <Icon className="w-8 h-8 text-white" />
                 </div>
 
-                <div className="text-4xl md:text-5xl font-heading font-bold text-text-dark mb-2">
+                <div className="text-4xl md:text-5xl font-heading font-bold text-navy mb-2">
                   <AnimatedNumber value={stat.value} suffix={stat.suffix} />
                 </div>
 
-                <p className="text-text-light font-medium">{stat.label}</p>
+                <p className="text-slate-600 font-medium">{stat.label}</p>
               </motion.div>
             );
           })}

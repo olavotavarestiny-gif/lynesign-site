@@ -26,14 +26,14 @@ export default function CTASection() {
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900">
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900">
         <motion.div
           animate={{
             x: [0, 20, 0],
             y: [0, -20, 0],
           }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+          className="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
         />
         <motion.div
           animate={{
@@ -41,7 +41,7 @@ export default function CTASection() {
             y: [0, 20, 0],
           }}
           transition={{ duration: 10, repeat: Infinity, delay: 1 }}
-          className="absolute bottom-20 right-10 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
+          className="absolute bottom-20 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
         />
       </div>
 
@@ -69,7 +69,7 @@ export default function CTASection() {
 
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button className="px-8 py-4 bg-gradient-to-r from-accent-coral to-accent-purple text-white rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 shadow-xl flex items-center justify-center gap-2 group">
+            <button className="px-8 py-4 bg-gradient-to-r from-navy to-blue-700 text-white rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 shadow-xl flex items-center justify-center gap-2 group">
               Schedule a Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
@@ -82,7 +82,7 @@ export default function CTASection() {
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-8">
             <a
               href="tel:+12815550100"
-              className="inline-flex items-center gap-3 text-white hover:text-accent-coral transition-colors"
+              className="inline-flex items-center gap-3 text-white hover:text-gold transition-colors"
             >
               <Phone className="w-6 h-6" />
               <div className="text-left">
@@ -92,7 +92,7 @@ export default function CTASection() {
             </a>
             <a
               href="mailto:info@lynesign.com"
-              className="inline-flex items-center gap-3 text-white hover:text-accent-coral transition-colors"
+              className="inline-flex items-center gap-3 text-white hover:text-gold transition-colors"
             >
               <Mail className="w-6 h-6" />
               <div className="text-left">

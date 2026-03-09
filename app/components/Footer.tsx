@@ -30,7 +30,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {['Indoor Billboards', 'Solutions', 'About', 'Contact'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-slate-400 hover:text-accent-coral transition-colors text-sm">
+                  <a href="#" className="text-slate-400 hover:text-gold transition-colors text-sm">
                     {link}
                   </a>
                 </li>
@@ -44,7 +44,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {['Website Design', 'Social Media Ads', 'PPC Advertising', 'Geofencing', 'Connected TV'].map((service) => (
                 <li key={service}>
-                  <a href="#" className="text-slate-400 hover:text-accent-coral transition-colors text-sm">
+                  <a href="#" className="text-slate-400 hover:text-gold transition-colors text-sm">
                     {service}
                   </a>
                 </li>
@@ -62,13 +62,13 @@ export default function Footer() {
               </p>
               <p className="text-slate-400 text-sm">
                 <span className="block font-medium text-white mb-1">Phone</span>
-                <a href="tel:+1234567890" className="hover:text-accent-coral transition-colors">
+                <a href="tel:+1234567890" className="hover:text-gold transition-colors">
                   (281) 555-0100
                 </a>
               </p>
               <p className="text-slate-400 text-sm">
                 <span className="block font-medium text-white mb-1">Email</span>
-                <a href="mailto:info@lynesign.com" className="hover:text-accent-coral transition-colors">
+                <a href="mailto:info@lynesign.com" className="hover:text-gold transition-colors">
                   info@lynesign.com
                 </a>
               </p>
@@ -94,7 +94,7 @@ export default function Footer() {
                 key={label}
                 href={href}
                 aria-label={label}
-                className="w-10 h-10 rounded-full bg-slate-800 hover:bg-accent-coral transition-colors flex items-center justify-center"
+                className="w-10 h-10 rounded-full bg-slate-800 hover:bg-navy transition-colors flex items-center justify-center"
               >
                 <Icon className="w-5 h-5" />
               </a>

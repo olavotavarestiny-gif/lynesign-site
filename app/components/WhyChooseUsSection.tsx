@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Heart, Target, DollarSign, Sparkles, BarChart3 } from 'lucide-react';
+import { Heart, Target, DollarSign, Sparkles, BarChart3, Lightbulb, Zap } from 'lucide-react';
 
 export default function WhyChooseUsSection() {
   const reasons = [
@@ -9,34 +9,31 @@ export default function WhyChooseUsSection() {
       title: 'Local Marketing Experts',
       description: 'Community-focused, Houston-based team that understands local market dynamics and customer behavior.',
       icon: Heart,
-      color: 'from-red-500 to-pink-500',
       testimonial: '"They know Houston like no one else."',
     },
     {
       title: 'Community-Based Advertising',
       description: 'Authentic connection with local audiences through venues where real relationships happen.',
       icon: Target,
-      color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'Affordability',
       description: 'Budget-friendly solutions for businesses of all sizes, with maximum ROI guaranteed.',
       icon: DollarSign,
-      color: 'from-green-500 to-emerald-500',
     },
     {
       title: 'Creative Excellence',
       description: 'Stand-out designs and compelling content that actually converts viewers into customers.',
       icon: Sparkles,
-      color: 'from-purple-500 to-pink-500',
     },
     {
       title: 'Proven Results',
       description: 'Track record of measurable success with data-driven insights and transparent reporting.',
       icon: BarChart3,
-      color: 'from-orange-500 to-red-500',
     },
   ];
+
+  const visualIcons = [Target, Zap, Lightbulb, Sparkles, BarChart3];
 
   return (
     <section className="py-20 md:py-32 bg-white">
@@ -49,13 +46,13 @@ export default function WhyChooseUsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold uppercase tracking-wider mb-4">
+          <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold uppercase tracking-wider mb-4">
             Why Choose Us
           </span>
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-text-dark mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold text-navy mb-6">
             Why Businesses Choose LyneSign
           </h2>
-          <p className="text-xl text-text-light max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             We're not just another marketing agency. Here's what sets us apart.
           </p>
         </motion.div>
@@ -64,6 +61,7 @@ export default function WhyChooseUsSection() {
         <div className="space-y-16">
           {reasons.map((reason, idx) => {
             const Icon = reason.icon;
+            const VisualIcon = visualIcons[idx];
             const isReverse = idx % 2 === 1;
 
             return (
@@ -78,27 +76,26 @@ export default function WhyChooseUsSection() {
                 {/* Content */}
                 <div className={isReverse ? 'md:order-2' : ''}>
                   <div className="flex items-start gap-4">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${reason.color} flex-shrink-0`}>
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-navy to-blue-700 flex-shrink-0">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-heading font-bold text-text-dark mb-4">{reason.title}</h3>
-                      <p className="text-text-light text-lg mb-6 leading-relaxed">{reason.description}</p>
-                      {reason.testimonial && <p className="text-lg italic text-accent-coral font-medium">{reason.testimonial}</p>}
+                      <h3 className="text-2xl md:text-3xl font-heading font-bold text-navy mb-4">{reason.title}</h3>
+                      <p className="text-slate-600 text-lg mb-6 leading-relaxed">{reason.description}</p>
+                      {reason.testimonial && <p className="text-lg italic text-navy font-medium">{reason.testimonial}</p>}
                     </div>
                   </div>
                 </div>
 
                 {/* Visual */}
                 <motion.div className={`relative h-64 md:h-80 rounded-2xl overflow-hidden ${isReverse ? 'md:order-1' : ''}`} whileHover={{ scale: 1.05 }}>
-                  <div className={`absolute inset-0 bg-gradient-to-br ${reason.color} opacity-20`} />
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div
                       animate={{ y: [-10, 10, -10] }}
                       transition={{ duration: 4, repeat: Infinity }}
-                      className="text-6xl"
                     >
-                      {['🎯', '🚀', '💡', '✨', '📊'][idx % 5]}
+                      <VisualIcon className="w-24 h-24 text-navy opacity-30" />
                     </motion.div>
                   </div>
                 </motion.div>

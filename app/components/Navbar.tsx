@@ -90,7 +90,7 @@ export default function Navbar() {
                           <ul className="space-y-2">
                             {section.items.map((item: string) => (
                               <li key={item}>
-                                <a href="#" className="text-sm text-text-light hover:text-accent-coral transition-colors">
+                                <a href="#" className="text-sm text-text-light hover:text-navy transition-colors">
                                   {item}
                                 </a>
                               </li>
@@ -120,7 +120,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <button className="px-6 py-2.5 bg-accent-coral text-white rounded-lg hover:bg-red-600 transition-all duration-300 shadow-lg hover:shadow-xl font-medium text-sm">
+            <button className="px-6 py-2.5 bg-navy text-white rounded-lg hover:bg-blue-900 transition-all duration-300 shadow-lg hover:shadow-xl font-medium text-sm">
               Get Started
             </button>
           </div>
@@ -145,7 +145,7 @@ export default function Navbar() {
                 </button>
               </div>
             ))}
-            <button className="w-full mt-4 px-4 py-2.5 bg-accent-coral text-white rounded-lg font-medium">
+            <button className="w-full mt-4 px-4 py-2.5 bg-navy text-white rounded-lg font-medium">
               Get Started
             </button>
           </div>
